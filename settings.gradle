@@ -1,0 +1,8 @@
+include ':mine'
+include ':list'
+include ':comment'
+include ':detail'
+include ':base_res'
+include ':baselib'
+include ':app'
+rootProject.name = "ARouterTest"

@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bill.comment">
+
+    <application>
+
+        <activity android:name=".CommentActivity" />
+
+    </application>
+
+</manifest>

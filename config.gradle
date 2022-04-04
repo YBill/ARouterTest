@@ -1,0 +1,26 @@
+ext {
+
+    // false 集成模式  true 组件模式可单独运行
+    isListComponent = false
+    isDetailComponent = false
+    isCommentComponent = false
+    isMineComponent = false
+
+    androidConfig = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.2",
+            minSdkVersion    : 19,
+            targetSdkVersion : 30
+    ]
+
+    supportLibVersion = '1.2.0'
+    arouterVersion = '1.5.2'
+    dependencies = [
+            "appcompat"       : "androidx.appcompat:appcompat:${supportLibVersion}",
+            "recyclerview"    : "androidx.recyclerview:recyclerview:${supportLibVersion}",
+            "constraintlayout": "androidx.constraintlayout:constraintlayout:2.0.4",
+
+            "arouter-api": "com.alibaba:arouter-api:${arouterVersion}",
+            "arouter-compiler": "com.alibaba:arouter-compiler:${arouterVersion}"
+    ]
+}
