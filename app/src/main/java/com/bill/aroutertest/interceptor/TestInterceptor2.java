@@ -12,17 +12,17 @@ import com.alibaba.android.arouter.facade.template.IInterceptor;
  * Created by Bill on 2022/4/4.
  */
 
-@Interceptor(priority = 2)
-public class TestInterceptor implements IInterceptor {
+@Interceptor(priority = 8)
+public class TestInterceptor2 implements IInterceptor {
 
     @Override
     public void process(Postcard postcard, InterceptorCallback callback) {
-        Log.d("Bill", "TestInterceptor process :" + postcard);
+        Log.d("Bill", "TestInterceptor2 process :" + postcard);
         callback.onContinue(postcard);
     }
 
     @Override
     public void init(Context context) {
-        Log.e("Bill", "TestInterceptor init");
+        Log.e("Bill", "TestInterceptor2 init");
     }
 }
