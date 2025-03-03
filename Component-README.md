@@ -14,13 +14,13 @@
 
 项目功能架构：
 
-![img](https://cheetah-mobile.feishu.cn/space/api/box/stream/download/asynccode/?code=Yzc2YTNmOTdkY2ZhNjAyYzhmN2UxYWU2M2E2Njk4N2VfdGlOckJJd05jSFZYeHhCbGhJSnVvY0t4eGxqbkdmRUxfVG9rZW46Ym94Y25yYWFtMGVYajlmcU5JdFdoaXpKcEdlXzE3NDA5OTA5OTc6MTc0MDk5NDU5N19WNA)
+![img](https://github.com/YBill/ARouterTest/blob/master/sc/component/app.png)
 
 #### 路由应用场景
 
 安卓的项目结构发展越来越倾向于多模块，而模块间的跳转如果使用原生方式（`Intent跳转`），那么会随着项目的发展壮大，最终导致错综复杂的相互关联，从而给维护带来很大的麻烦，如下图这样：
 
-
+![img](https://github.com/YBill/ARouterTest/blob/master/sc/component/component_2.jpg)
 
 > 黑色线条：表示依赖，有了依赖，就可以在当前模块引用其他模块的类，就可以使用`Intent` 跳转。
 
@@ -36,7 +36,7 @@
 
 而`ARouter`的出现，就很好的解决了这个问题，其功能很强大，对于多模块的项目，无论是否组件化，都很好的解决了相互依赖和跳转带来的维护成本。使用ARouter解耦后如下图：
 
-
+![img](https://github.com/YBill/ARouterTest/blob/master/sc/component/component_1.jpg)
 
 > 黑色线条：表示依赖关系，这里的依赖主要是解决资源共用问题，而不是跳转。如果用不到baselib中的资源，那么无需依赖。
 
@@ -46,11 +46,11 @@
 
 `baselib`是存放公共文件；`list`、`detail`、`comment`、`mine`分别是列表、详情、评论、我的四个单独模块，分别都依赖 baselib，并且四个模块都可以独立运行；`app` 是项目主入口，依赖 list、detail、comment、mine。项目结构如下图：
 
-![img](https://cheetah-mobile.feishu.cn/space/api/box/stream/download/asynccode/?code=MzQwNTk1MjFiMDdlZGRhMTE3MjliZDBkM2M1NzEzZDhfQWJJQ0hZNTBZc0pVVVdkUmFrTjJzbEwwa0tQREJMRVZfVG9rZW46Ym94Y25saGlHWjEwOEpkR3lEb0FhYUdyQlBlXzE3NDA5OTA5OTc6MTc0MDk5NDU5N19WNA)
+![img](https://github.com/YBill/ARouterTest/blob/master/sc/component/project.png)
 
 配置如下：
 
-```Java
+```groovy
 ext {
     // false 集成模式  true 组件模式可单独运行
     isListComponent = false
